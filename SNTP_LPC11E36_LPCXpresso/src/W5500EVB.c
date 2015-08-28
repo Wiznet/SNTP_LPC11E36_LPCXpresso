@@ -46,7 +46,7 @@ volatile uint32_t msTicks; 		/* counts 1ms timeTicks */
 // Demo Firmware Version //
 ///////////////////////////
 #define VER_H		1
-#define VER_L		00
+#define VER_L		01
 
 ////////////////////////////////////////////////
 // Shared Buffer Definition for NTP TEST //
@@ -74,7 +74,8 @@ static uint8_t Check_Buttons_Pressed(void);
 void SysTick_Handler(void);
 
 int main(void) {
-	uint8_t ntp_server[4] = {128, 138, 141, 172};	// time.nist.gov
+	//uint8_t ntp_server[4] = {128, 138, 141, 172};	// time.nist.gov
+	uint8_t ntp_server[4] = {211, 233, 84, 186};	// kr.pool.ntp.org
 	datetime time;
 
 #if defined (__USE_LPCOPEN)
